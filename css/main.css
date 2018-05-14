@@ -2,3 +2,29 @@
     font-family: Consolas;
     src: url("../fonts/Consolas.ttf");
 }
+.header_grid{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-areas: 
+	"logo logo logo leeg hamburger";
+}
+.logo{
+	grid-area: logo;
+	width: 50vw;
+}
+.header_leeg{
+	grid-area: leeg;
+}
+.hamburger{
+	grid-area: hamburger;
+	width: 10vw;
+}
+.home_grid{
+	display: grid;
+	grid-gap: 5vw;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, auto);
+}
+.home_mennu{
+	width: 30vw;
+}

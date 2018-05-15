@@ -2,29 +2,40 @@
     font-family: Consolas;
     src: url("../fonts/Consolas.ttf");
 }
-.header_grid{
+header{
+	padding: 2vw 4vw 2vw 4vw;
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: 40vw 1fr 10vw;
 	grid-template-areas: 
-	"logo logo logo leeg hamburger";
+	"logo leeg hamburger";
 }
 .logo{
 	grid-area: logo;
-	width: 50vw;
-}
-.header_leeg{
-	grid-area: leeg;
+	width: 100%;
 }
 .hamburger{
 	grid-area: hamburger;
-	width: 10vw;
+	width: 100%;
 }
-.home_grid{
+.home_container{
+	padding: 2vw;
 	display: grid;
-	grid-gap: 5vw;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, auto);
+	grid-column-gap: 5vw;
+	grid-row-gap: 3vw;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, auto);
+	
 }
-.home_mennu{
-	width: 30vw;
+.home_menu{
+	width: 100%;
+}
+@media (min-width: 768px) {
+	header {
+		grid-template-columns: 32vw 1fr 7vw;
+	}
+	.home_container {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, auto);
+	}
+
 }

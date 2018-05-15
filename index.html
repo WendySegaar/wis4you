@@ -9,20 +9,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	<script type="text/javascript" src="js/hamburger.js"></script>
 	<title>WIS4YOU</title>
 </head>
 <body>
 	<header>
-		<img class="logo" src="images/logo.png">
-		<img class="hamburger" src="images/hamburger.png">
+		<img id="logo" src="images/logo.png">
+		<img id="hamburger" src="images/hamburger.png" onclick="hamburgerDropdown();">
+		<nav id="hamburgerDropdown">
+			<ul>
+				<li><a href="presentatie.html">Presentatie</a></li>
+				<li><a href="rekenen.html">Rekenen</a></li>
+				<li><a href="reeksen.html">Reeksen</a></li>
+				<li><a href="pittig_rekenen.html">Pittig rekenen</a></li>
+				<li><a href="dobbelen.html">Dobbelen</a></li>
+				<li><a href="shoot_the_pig.html">Shoot the pig</a></li>
+			</ul>
+		</nav>
 	</header>
 	<div class="home_container">
-		<img class="home_menu" src="images/menu_1.png">
-		<img class="home_menu" src="images/menu_2.png">
-		<img class="home_menu" src="images/menu_3.png">
-		<img class="home_menu" src="images/menu_4.png">
-		<img class="home_menu" src="images/menu_5.png">
-		<img class="home_menu" src="images/menu_6.png">
+		<a href="presentatie.html"><img class="home_menu" src="images/menu_1.png"></a>
+		<a href="rekenen.html"><img class="home_menu" src="images/menu_2.png"></a>
+		<a href="reeksen.html"><img class="home_menu" src="images/menu_3.png"></a>
+		<a href="pittig_rekenen.html"><img class="home_menu" src="images/menu_4.png"></a>
+		<a href="dobbelen.html"><img class="home_menu" src="images/menu_5.png"></a>
+		<a href="shoot_the_pig.html"><img class="home_menu" src="images/menu_6.png"></a>
 	</div>
 	<footer>
 		

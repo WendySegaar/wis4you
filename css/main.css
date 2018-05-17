@@ -56,6 +56,11 @@ header{
 	-webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.4);
 	border-radius: 8px;
 }
+.home_tekst{
+	color: var(--dark-blue);
+	padding: 2vw 4vw;
+	width: calc(100% - 8vw);
+}
 @media (min-width: 768px) {
 	header {
 		grid-template-columns: 32vw 1fr 7vw;
@@ -71,5 +76,8 @@ header{
 	}
 	#hamburgerDropdown a {
 		font-size: 4vw;
+	}
+	.home_tekst{
+		font-size: 2vw;
 	}
 }

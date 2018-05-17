@@ -65,7 +65,14 @@ header{
 	padding: 2vw 4vw;
 	width: calc(100% - 8vw);
 }
+.home_tekst h1 {
+	font-size: 7vw;
+}
+.home_tekst p {
+	font-size: 4vw;
+}
 footer {
+	margin-top: 1vw;
 	background-color: var(--light-blue);
 	padding: 2vw 4vw;
 	width: calc(100% - 8vw);
@@ -119,11 +126,17 @@ input[type=submit] {
 	.home_tekst{
 		font-size: 2vw;
 	}
+	.home_tekst h1 {
+		font-size: 6vw;
+	}
+	.home_tekst p {
+		font-size: 2vw;
+	}
 	footer h2 {
 		font-size: 5vw;
 	}
 	footer p {
-		font-size: 3vw;
+		font-size: 2vw;
 	}
 	form {
 		grid-template-rows: 1fr;

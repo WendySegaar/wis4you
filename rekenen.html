@@ -9,15 +9,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
-	<script type="text/javascript" src="js/tafel.js"></script>
+	<script type="text/javascript" src="js/tafel.js js/berekening.js"></script>
 	<title>WIS4YOU</title>
 </head>
 <body>
-	<input type="text" id="tafelGetal">
-	<input type="text" id="tafelAantal">
-	<input type="submit" onclick="startBereken()">
-	<div id="uitkomst">
-		
+	<div id="berekening">Maak een keuze welke bereking je uit wilt voeren</div>
+	<button class="buttonR" onclick="bereken(1);">Tafelreeks</button>
+	<button class="buttonR" onclick="bereken(2);">Machtreeks</button>
+	<button class="buttonR" onclick="bereken(3);">Breukenreeks</button>
+	<button class="buttonR" onclick="bereken(4);">Kwadratenreeks</button>
+	<div id="uitkomst"></div>
 	</div>
 </body>
 </html>

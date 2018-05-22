@@ -107,6 +107,10 @@ input[type=submit] {
 	border: 0 none;
 	background: linear-gradient( var(--light-blue),  var(--dark-blue));
 }
+/*rekenpagina*/
+#berekening {
+	background-color: var(--light-blue);
+}
 @media (min-width: 768px) {
 	header {
 		grid-template-columns: 32vw 1fr 7vw;

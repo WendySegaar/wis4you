@@ -1,4 +1,16 @@
 function startBereken(){
-	var tafelGetal ;
-	var tafelAantal = document.getElementById('tafelAantal').value
+	var tafelGetal = document.getElementById('tafelGetal').value ;
+	var tafelAantal = document.getElementById('tafelAantal').value ;
+	var uitkomst = 0 ;
+
+	parseInt(tafelGetal){
+		if (parseInt(tafelAantal)) {
+			for (var i; i <= tafelAantal; i++) {
+				uitkomst = i * tafelGetal;
+				document.getElementById('uitkomst').innerHTML = i+ " x " +tafelGetal+ " = " +uitkomst ;
+			}
+		}
+		else{alert(" ")}
+	}
+	else{alert(" ")}
 }

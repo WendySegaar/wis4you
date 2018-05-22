@@ -3,7 +3,7 @@ function startBereken(){
 	var tafelAantal = document.getElementById('tafelAantal').value ;
 	var uitkomst = 0 ;
 
-	parseInt(tafelGetal){
+	if (parseInt(tafelGetal)){
 		if (parseInt(tafelAantal)) {
 			for (var i; i <= tafelAantal; i++) {
 				uitkomst = i * tafelGetal;

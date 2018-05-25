@@ -108,10 +108,55 @@ form {
 	background: linear-gradient( var(--light-blue),  var(--dark-blue));
 }
 /*rekenpagina*/
+#rekenen_container{
+	padding: 2vw;
+	display: grid;
+	
+	grid-column-gap: 3vw;
+	grid-row-gap: 5vw;
+
+}
 #berekening {
+	background-color: white;
+	width: 100%;
+	-webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.4);
+	border-radius: 8px;
+	border: 1px solid var(--light-blue);
+	color: var(--light-blue);
+	text-align: center;
+	grid-area: berekening;
+}
+.buttonR{
 	background-color: var(--light-blue);
 	width: 100%;
+	-webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.4);
+	border-radius: 8px;
+	border: 0 none;
+	color: white;
 }
+#knopA{
+	grid-area: knopA;
+}
+#knopB{
+	grid-area: knopB;
+}
+#knopC{
+	grid-area: knopC;
+}
+#knopD{
+	grid-area: knopD;
+}
+#uitkomst{
+	background-color: white;
+	width: 100%;
+	-webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.4);
+	border-radius: 8px;
+	border: 1px solid var(--light-blue);
+	color: var(--light-blue);
+	text-align: center;
+	grid-area: uitkomst;
+}
+
 @media (min-width: 768px) {
 	header {
 		grid-template-columns: 32vw 1fr 7vw;
@@ -154,4 +199,29 @@ form {
 	#footerSubmit {
 		align-self: bottom;
 	}
+	/*rekenpagina*/
+	#rekenen_container{
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas: "berekening berekening berekening berekening"
+							"berekening berekening berekening berekening"
+							"knopA knopB knopC knopD"
+							"uitkomst uitkomst uitkomst uitkomst"
+							"uitkomst uitkomst uitkomst uitkomst";
+	}
+	#berekening{
+		height: 20vw;
+		font-size: 2.5vw
+	}
+	.buttonR{
+		height: 10vw;
+		font-size: 2vw;
+	}
+	#uitkomst{
+		height: 20vw;
+		font-size: 2.5vw
+	}
+
+
+
 }

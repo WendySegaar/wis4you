@@ -28,19 +28,21 @@
 			</ul>
 		</nav>
 	</header>
-	<div id="berekening">Maak een keuze welke bereking je uit wilt voeren</div>
-	<button class="buttonR" onclick="bereken(1);">Tafelreeks</button>
-	<button class="buttonR" onclick="bereken(2);">Machtreeks</button>
-	<button class="buttonR" onclick="bereken(3);">Breukenreeks</button>
-	<button class="buttonR" onclick="bereken(4);">Kwadratenreeks</button>
-	<div id="uitkomst"></div>
+	<div id="rekenen_container">
+		<div id="berekening">Maak een keuze welke bereking je uit wilt voeren</div>
+		<button class="buttonR" id="knopA" onclick="bereken(1);">Tafelreeks</button>
+		<button class="buttonR" id="knopB" onclick="bereken(2);">Machtreeks</button>
+		<button class="buttonR" id="knopC" onclick="bereken(3);">Breukenreeks</button>
+		<button class="buttonR" id="knopD" onclick="bereken(4);">Kwadratenreeks</button>
+		<div id="uitkomst">Uitkomst</div>
+	</div>
 	</div>
 	<footer>
 		<h2>Vragen of suggesties</h2>
 		<p>Heb jij na het bekijken van de website nog een vraag over logica? Of heb je een suggestie voor het verbeteren van de website? Dan horen wij graag van je!</p>
 		<form>
-			<input type="text">
-			<input type="submit" value="Verstuur">
+			<input id="footerInput" type="text">
+			<input id="footerSubmit" type="submit" value="Verstuur">
 		</form>
 	</footer>
 </body>

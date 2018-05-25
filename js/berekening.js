@@ -1,9 +1,9 @@
-function () {}
+
+function bereken(x) {
+	if(x = 1){
+		document.getElementById("berekening").innerHTML = "Uitleg<input type='text' id='input1'><input type="text" id="input2"><input type="submit" onclick="startBereken()">";
+ 	}
+}
 
 
-Maak een keuze welke bereking je uit wilt voeren
 
-
-<input type="text" id="input1">
-		<input type="text" id="input2">
-		<input type="submit" onclick="startBereken()">

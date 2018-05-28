@@ -145,16 +145,16 @@ form {
 	border: 0 none;
 	color: white;
 }
-#knopA{
+#reken_knopA{
 	grid-area: knopA;
 }
-#knopB{
+#reken_knopB{
 	grid-area: knopB;
 }
-#knopC{
+#reken_knopC{
 	grid-area: knopC;
 }
-#knopD{
+#reken_knopD{
 	grid-area: knopD;
 }
 #uitkomst{

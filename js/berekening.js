@@ -34,5 +34,13 @@ function tafel(){
 }
 
 function macht(){
+	var machtGetal = document.getElementById('machtGetal').value ;
+	var uitkomst = 1 ;
 
+	if (parseInt(machtGetal)) {
+		for (var i = 0; i <= 15; i++) {
+			document.getElementById('uitkomst').innerHTML += "<br/>" + machtGetal + "^" + i + " = " + uitkomst ;
+			uitkomst = uitkomst * machtGetal;
+		}
+	}
 }

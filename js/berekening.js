@@ -44,3 +44,14 @@ function macht(){
 		}
 	}
 }
+function kwadraat() {
+	var kwadraatGetal = document.getElementById('kwadraatGetal').value;
+	var uitkomst = 0 ;
+
+	if (parseInt(kwadraatGetal)) {
+		for (var i = 1; i <= kwadraatGetal; i++) {
+			uitkomst = i * i ;
+			document.getElementById('uitkomst').innerHTML += "<br/>" + i + "^" + i + " = " + uitkomst ;
+		}
+	}
+}

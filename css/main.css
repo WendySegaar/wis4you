@@ -155,12 +155,6 @@ form {
 #pittigReken_knopB{
 	grid-area: knopB;
 }
-#pittigReken_knopC{
-	grid-area: knopC;
-}
-#pittigReken_knopD{
-	grid-area: knopD;
-}
 #uitkomst{
 	background-color: white;
 	width: 100%;

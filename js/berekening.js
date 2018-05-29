@@ -62,7 +62,7 @@ function kwadraat() {
 	if (parseInt(kwadraatGetal)) {
 		for (var i = 1; i <= kwadraatGetal; i++) {
 			uitkomst = i * i ;
-			document.getElementById('uitkomst').innerHTML += "<br/>" + i + "^" + i + " = " + uitkomst ;
+			document.getElementById('uitkomst').innerHTML += "<br/>" + i + "^" + "2" + " = " + uitkomst ;
 		}
 	}
 }

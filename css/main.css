@@ -170,6 +170,21 @@ form {
 	text-align: center;
 	grid-area: uitkomst;
 }
+/*reeksen pagina*/
+#reeksen_container{
+	padding: 2vw;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(5, auto);
+	grid-template-areas: "berekening berekening"
+						"berekening berekening"
+						"knopA knopB"
+						"uitkomst uitkomst"
+						"uitkomst uitkomst";
+	grid-column-gap: 3vw;
+	grid-row-gap: 5vw;
+
+}
 
 /*pittigRekenpagina*/
 #pittigRekenen_container{

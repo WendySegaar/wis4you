@@ -34,5 +34,35 @@ function tafel(){
 }
 
 function macht(){
+	var machtGetal = document.getElementById('machtGetal').value ;
+	var uitkomst = 1 ;
 
+	if (parseInt(machtGetal)) {
+		for (var i = 0; i <= 15; i++) {
+			document.getElementById('uitkomst').innerHTML += "<br/>" + machtGetal + "^" + i + " = " + uitkomst ;
+			uitkomst = uitkomst * machtGetal;
+		}
+	}
+}
+function breuk() {
+	var breukGetal = document.getElementById('breukGetal').value;
+	var uitkomst = 0 ;
+
+	if (parseInt(breukGetal)) {
+		for (var i = 1; i <= breukGetal; i++) {
+			uitkomst = 1 / i ;
+			document.getElementById('uitkomst').innerHTML += "<br/> 1/" + i + " = " + uitkomst ;
+		}
+	}
+}
+function kwadraat() {
+	var kwadraatGetal = document.getElementById('kwadraatGetal').value;
+	var uitkomst = 0 ;
+
+	if (parseInt(kwadraatGetal)) {
+		for (var i = 1; i <= kwadraatGetal; i++) {
+			uitkomst = i * i ;
+			document.getElementById('uitkomst').innerHTML += "<br/>" + i + "^" + "2" + " = " + uitkomst ;
+		}
+	}
 }

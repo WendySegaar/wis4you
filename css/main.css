@@ -171,6 +171,21 @@ form {
 	grid-area: uitkomst;
 }
 
+/*pittigRekenpagina*/
+#pittigRekenen_container{
+	padding: 2vw;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(5, auto);
+	grid-template-areas: "berekening berekening"
+						"berekening berekening"
+						"knopA knopB"
+						"uitkomst uitkomst"
+						"uitkomst uitkomst";
+	grid-column-gap: 3vw;
+	grid-row-gap: 5vw;
+
+}
 @media (min-width: 768px) {
 	header {
 		grid-template-columns: 32vw 1fr 7vw;

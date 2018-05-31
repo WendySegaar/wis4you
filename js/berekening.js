@@ -1,22 +1,23 @@
 
 function bereken(x) {
 	if(x == 1){
-		document.getElementById("berekening").innerHTML = "Uitleg Tafelreeks<br/><input type='text' id='tafelGetal'><br/><input type='text' id='tafelAantal'><input type='submit' onclick='tafel();'>";
+		document.getElementById("berekening").innerHTML = "Uitleg Tafelreeks<p>Deze tafelreeks berekent de tafel van het getal dat jij invult. We beginnen bij 1 keer dit getal tot het getal dat jij invult als maximum.</p><label for='tafelGetal'>Tafel van:</label><input class='inputRek' type='text' id='tafelGetal'><br/><label for='tafelAantal'>Tot en met:</label><input class='inputRek' type='text' id='tafelAantal'><br/><input id='submitRek' type='submit' onclick='tafel();'><div id='error'></div>";
  	}
  	else if(x == 2){
- 		document.getElementById("berekening").innerHTML = "Uitleg Machtreeks<br/><input type='text' id='machtGetal'><input type='submit' onclick='macht();'>";
+ 		document.getElementById("berekening").innerHTML = "Uitleg Machtreeks<p>Deze machtreeks berekent de uitkomst van het getal dat jij invult tot de macht 1 tot en met 15.</p><label for='machtGetal'>Machtreeks van:</label><input class='inputRek' type='text' id='machtGetal'><br/><input id='submitRek' type='submit' onclick='macht();'>";
  	}
  	else if(x == 3){
-		document.getElementById("berekening").innerHTML = "Uitleg Breukenreeks<br/><input type='text' id='breukGetal'><input type='submit' onclick='breuk();'>";
+		document.getElementById("berekening").innerHTML = "Uitleg Breukenreeks<p>Deze breukenreeks berekent de uitkomst van 1 gedeeld door 1 tot en met het getal dat jij invult.</p><label for='breukGetal'>Tot en met:</label><input class='inputRek' type='text' id='breukGetal'><br/><input id='submitRek' type='submit' onclick='breuk();'>";
  	}
  	else if(x == 4){
- 		document.getElementById("berekening").innerHTML = "Uitleg Kwadratenreeks<br/><input type='text' id='kwadraatGetal'><input type='submit' onclick='kwadraat();'>";
+ 		document.getElementById("berekening").innerHTML = "Uitleg Kwadratenreeks<p>Deze kwadratenreeks berekent het kwadraat (tot de macht 2) van 1 tot en met het getal dat jij invult.</p><label for='kwadraatGetal'>Tot en met:</label><input class='inputRek' type='text' id='kwadraatGetal'><br/><input id='submitRek' type='submit' onclick='kwadraat();'>";
  	}
 }
 
 
 
 function tafel(){
+	document.getElementById("uitkomst").innerHTML= "";
 	var tafelGetal = document.getElementById('tafelGetal').value ;
 	var tafelAantal = document.getElementById('tafelAantal').value ;
 	var uitkomst = 0 ;
@@ -26,9 +27,13 @@ function tafel(){
 			for (var i=0; i <= tafelAantal; i++) {
 				uitkomst = i * tafelGetal;
 				document.getElementById('uitkomst').innerHTML += "<br/>" + i+ " x " +tafelGetal+ " = " +uitkomst ;
+				document.getElementById("error").innerHTML = "Bereking gelukt!"
 			}
 		}
-		else{alert("Vul een geheel getal in voor het aantal van de reeks");}
+		else{
+			document.getElementById("error").innerHTML = "<br/>Vul een geheel getal in voor het aantal van de reeks."
+			//alert("Vul een geheel getal in voor het aantal van de reeks");
+		}
 	}
 	else{alert("Vul een geheel getal in voor welke tafel je wilt berekenen");}
 }
@@ -44,6 +49,7 @@ function macht(){
 		}
 	}
 }
+
 function breuk() {
 	var breukGetal = document.getElementById('breukGetal').value;
 	var uitkomst = 0 ;
@@ -55,6 +61,7 @@ function breuk() {
 		}
 	}
 }
+
 function kwadraat() {
 	var kwadraatGetal = document.getElementById('kwadraatGetal').value;
 	var uitkomst = 0 ;
@@ -66,3 +73,4 @@ function kwadraat() {
 		}
 	}
 }
+

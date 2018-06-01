@@ -141,9 +141,6 @@ form {
 #berekening label {
 	font-size: 1.5vw;
 }
-#error {
-	margin-top: -5vw;
-}
 .inputRek {
 	width: 5vw;
 	border: 1px solid var(--light-blue);

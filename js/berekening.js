@@ -12,6 +12,12 @@ function bereken(x) {
  	else if(x == 4){
  		document.getElementById("berekening").innerHTML = "Uitleg Kwadratenreeks<p>Deze kwadratenreeks berekent het kwadraat (tot de macht 2) van 1 tot en met het getal dat jij invult.</p><label for='kwadraatGetal'>Tot en met:</label><input class='inputRek' type='text' id='kwadraatGetal'><br/><input id='submitRek' type='submit' value='Bereken' onclick='kwadraat();'><div id='error'></div>";
  	}
+ 	else if(x == 5){
+ 		document.getElementById("berekening").innerHTML = "Uitleg Fibonacci reeks<p>Uitleg...</p><label for='fibonacciGetal'>Tot en met:</label><input class='inputRek' type='text' id='fibonacciGetal'><br/><input id='submitRek' type='submit' value='Bereken' onclick='fibonacci();'><div id='error'></div>";
+ 	}
+ 	else if(x == 6){
+ 		document.getElementById("berekening").innerHTML = "Uitleg priemgetallenreeks<p>Uitleg...</p><label for='priemGetal'>Tot en met:</label><input class='inputRek' type='text' id='priemGetal'><br/><input id='submitRek' type='submit' value='Bereken' onclick='priem();'><div id='error'></div>";
+ 	}
 }
 
 

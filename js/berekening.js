@@ -119,10 +119,8 @@ function priemGetal() {
 
 	if (parseInt(priemGetal)) {
 		for (var i = 0 ; i < priemGetal; i = test) {
-<<<<<<< HEAD
-		
-			
-=======
->>>>>>> c0fa8de1a681d37a8eff691d76857c80d5667d4f
+
+			test + 2 ;
+		}
 	}
 }

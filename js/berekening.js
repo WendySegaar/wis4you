@@ -96,3 +96,29 @@ function kwadraat() {
 	}
 }
 
+function fibonacci() {
+	var fibonacciGetal = document.getElementById('fibonacciGetal').value ;
+	var a = 0 ;
+	var b = 1 ;
+	var c = 0 ;
+
+	if (parseInt(fibonacciGetal)) {
+		for (var i = 0; i < fibonacciGetal; i = c) {
+			document.getElementById('uitkomst').innerHTML += "</br>" + c  ; 
+			c = a + b ;
+			a = b ;
+			b = c ;
+		}
+	}
+}
+function priemGetal() {
+	var priemGetal = document.getElementById('priemGetal').value ;
+	//var p(0) = 2 ;
+	//var p(1), test = 3 ;
+	var teller = 2; 
+
+	if (parseInt(priemGetal)) {
+		for (var i = 0 ; i < priemGetal; i = test) {
+			
+	}
+}

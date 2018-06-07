@@ -119,6 +119,7 @@ function priemGetal() {
 
 	if (parseInt(priemGetal)) {
 		for (var i = 0 ; i < priemGetal; i = test) {
+		
 			
 	}
 }

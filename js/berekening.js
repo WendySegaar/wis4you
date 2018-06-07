@@ -113,12 +113,12 @@ function fibonacci() {
 }
 function priemGetal() {
 	var priemGetal = document.getElementById('priemGetal').value ;
-	//var p(0) = 2 ;
-	//var p(1), test = 3 ;
+	var p = [2,3]  ;
+	var test = 3 ;
 	var teller = 2; 
 
 	if (parseInt(priemGetal)) {
 		for (var i = 0 ; i < priemGetal; i = test) {
-			
+			test + 2 ;
 	}
 }

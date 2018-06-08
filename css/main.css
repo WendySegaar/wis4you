@@ -182,11 +182,11 @@ form {
 	grid-area: uitkomst;
 }
 /*reeksen pagina*/
-#container{
+.container{
 	padding: 2vw;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(5, auto);
+	grid-template-rows: repeat(3, auto);
 	grid-template-areas: "berekening berekening"
 						"knopA knopB"
 						"uitkomst uitkomst";
@@ -196,9 +196,6 @@ form {
 }
 /*dobbelenPagina*/
 #dobbelenContainer {
-	padding: 2vw;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(7, auto);
 	grid-template-areas: "berekening berekening"
 						"spinIt spinIt"
@@ -207,6 +204,7 @@ form {
 						"clearIt clearIt"
 						"numberRad1 numberRad2"
 						"uitkomst uitkomst";
+	grid-row-gap: 2vw;
 }
 #pointer1{
 	grid-area: pointer1;
@@ -234,11 +232,11 @@ form {
 #spinIt, #btnClearIt{
 	grid-area: spinIt;
 	width: 100%;
-	margin: 2vw;
 	border: 1px solid var(--light-blue);
 	background: linear-gradient( var(--light-blue),  var(--dark-blue));
 	color: white;
 }
+#numberRad1{grid-area: numberRad1;} #numberRad2{grid-area: numberRad2;}
 #btnClearIt {
 	grid-area: clearIt;
 	

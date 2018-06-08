@@ -111,16 +111,18 @@ function fibonacci() {
 		}
 	}
 }
-function priemGetal() {
+function priem() {
 	var priemGetal = document.getElementById('priemGetal').value ;
-	var p = [2,3]  ;
-	var test = 3 ;
-	var teller = 2; 
-
-	if (parseInt(priemGetal)) {
-		for (var i = 0 ; i < priemGetal; i = test) {
-
-			test + 2 ;
+	for (var i = 2; i <= priemGetal; i++) {
+		var IsPrime = true;
+		for (var x = 2; x < i; x++) {
+			if (i % x == 0) {
+				IsPrime = false ;
+			}
+			
+		}
+		if (IsPrime == true) {
+			document.getElementById('uitkomst').innerHTML += "</br>" + i;
 		}
 	}
 }

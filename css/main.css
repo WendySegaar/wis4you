@@ -220,13 +220,20 @@ form {
 	padding: 2vw;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(5, auto);
+	grid-template-rows: repeat(7, auto);
 	grid-template-areas: "berekening berekening"
+						"spinIt spinIt"
 						"pointer1 pointer2"
 						"rad1 rad2"
 						"clearIt clearIt"
 						"numberRad1 numberRad2"
 						"uitkomst uitkomst";
+}
+#pointer1{
+	grid-area: pointer1;
+}
+#pointer2{
+	grid-area: pointer2;
 }
 .pointer {
 	width: 0;
@@ -236,17 +243,26 @@ form {
 	border-top: 10px solid #000;
 	margin: 10px  auto 10px auto;
 }
-
+#rad1 {grid-area: rad1;} #rad2{grid-area: rad2;}
 .rad {
+	grid-area: rad;
 	width: 200px;
 	height: 200px;
 	background-image: url('../images/rad_6.gif');
 	background-size: contain;
 	margin: 0 auto;
 }
-
+#spinIt, #btnClearIt{
+	grid-area: spinIt;
+	width: 100%;
+	margin: 2vw;
+	border: 1px solid var(--light-blue);
+	background: linear-gradient( var(--light-blue),  var(--dark-blue));
+	color: white;
+}
 #btnClearIt {
-	display: none;
+	grid-area: clearIt;
+	
 }
 
 @media (min-width: 768px) {

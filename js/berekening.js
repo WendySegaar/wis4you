@@ -18,6 +18,12 @@ function bereken(x) {
  	else if(x == 6){
  		document.getElementById("berekening").innerHTML = "Uitleg priemgetallenreeks<p>Uitleg...</p><label for='priemGetal'>Tot en met:</label><input class='inputRek' type='text' id='priemGetal'><br/><input id='submitRek' type='submit' value='Bereken' onclick='priem();'><div id='error'></div>";
  	}
+ 	else if(x == 7){
+ 		document.getElementById("berekening").innerHTML = "Uitleg getalstelsel omrekenen <p>Uitleg...</p><label for='vanafGetal'>Vanaf dit talstelsel:</label><input class='inputRek' type='text' id='vanafGetal'><br/><label for='omrekenGetal'>Om te rekenen getal:</label><input class='inputRek' type='text' id='omrekenGetal'><br/><label for='naarGetal'>Naar dit talstelsel:</label><input class='inputRek' type='text' id='naarGetal'><input id='submitRek' type='submit' value='Bereken' onclick='omrekenTalstelsel();'><div id='error'></div>";
+ 	}
+ 	else if(x == 8){
+ 		document.getElementById("berekening").innerHTML = "Uitleg ontbinden in priemgetallen<p>Uitleg...</p><label for='ontbindGetal'>Ontbind dit getal:</label><input class='inputRek' type='text' id='ontbindGetal'><br/><input id='submitRek' type='submit' value='Bereken' onclick='ontbinden();'><div id='error'></div>";
+ 	}
 }
 
 

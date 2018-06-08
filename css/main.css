@@ -228,6 +228,27 @@ form {
 						"numberRad1 numberRad2"
 						"uitkomst uitkomst";
 }
+.pointer {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #000;
+	margin: 10px  auto 10px auto;
+}
+
+.rad {
+	width: 200px;
+	height: 200px;
+	background-image: url('../images/rad_6.gif');
+	background-size: contain;
+	margin: 0 auto;
+}
+
+#btnClearIt {
+	display: none;
+}
+
 @media (min-width: 768px) {
 	header {
 		grid-template-columns: 32vw 1fr 7vw;

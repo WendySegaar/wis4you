@@ -215,6 +215,19 @@ form {
 	grid-row-gap: 5vw;
 
 }
+/*dobbelenPagina*/
+#dobbelenContainer {
+	padding: 2vw;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(5, auto);
+	grid-template-areas: "berekening berekening"
+						"pointer1 pointer2"
+						"rad1 rad2"
+						"clearIt clearIt"
+						"numberRad1 numberRad2"
+						"uitkomst uitkomst";
+}
 @media (min-width: 768px) {
 	header {
 		grid-template-columns: 32vw 1fr 7vw;
@@ -268,7 +281,7 @@ form {
 							"uitkomst uitkomst uitkomst uitkomst";
 	}
 	#berekening{
-		height: 20vw;
+		height: auto;
 		font-size: 2.5vw;
 	}
 	.buttonR{
@@ -276,7 +289,7 @@ form {
 		font-size: 2vw;
 	}
 	#uitkomst{
-		height: 20vw;
+		height: auto;
 		font-size: 2.5vw;
 	}
 

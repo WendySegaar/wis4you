@@ -13,16 +13,16 @@ function bereken(x) {
  		document.getElementById("berekening").innerHTML = "Uitleg Kwadratenreeks<p>Deze kwadratenreeks berekent het kwadraat (tot de macht 2) van 1 tot en met het getal dat jij invult.</p><label for='kwadraatGetal'>Tot en met:</label><input class='inputRek' type='text' id='kwadraatGetal'><br/><input id='submitRek' type='submit' value='Bereken' onclick='kwadraat();'><div id='error'></div>";
  	}
  	else if(x == 5){
- 		document.getElementById("berekening").innerHTML = "Uitleg Fibonacci reeks<p>Uitleg...</p><label for='fibonacciGetal'>Tot en met:</label><input class='inputRek' type='text' id='fibonacciGetal'><br/><input id='submitRek' type='submit' value='Bereken' onclick='fibonacci();'><div id='error'></div>";
+ 		document.getElementById("berekening").innerHTML = "Uitleg Fibonacci reeks<p>Vul een getal in en de fibonaccireeks wordt tot dit getal berekend. Deze reeks begint met 0 en 1 en elk volgende getal is een optelling van de vorige twee getallen.</p><label for='fibonacciGetal'>Tot en met:</label><input class='inputRek' type='text' id='fibonacciGetal'><br/><input id='submitRek' type='submit' value='Bereken' onclick='fibonacci();'><div id='error'></div>";
  	}
  	else if(x == 6){
- 		document.getElementById("berekening").innerHTML = "Uitleg priemgetallenreeks<p>Uitleg...</p><label for='priemGetal'>Tot en met:</label><input class='inputRek' type='text' id='priemGetal'><br/><input id='submitRek' type='submit' value='Bereken' onclick='priem();'><div id='error'></div>";
+ 		document.getElementById("berekening").innerHTML = "Uitleg priemgetallenreeks<p>Vul een getal in als maximum en alle priemgetallen onder dit getal worden berekend.</p><label for='priemGetal'>Tot en met:</label><input class='inputRek' type='text' id='priemGetal'><br/><input id='submitRek' type='submit' value='Bereken' onclick='priem();'><div id='error'></div>";
  	}
  	else if(x == 7){
- 		document.getElementById("berekening").innerHTML = "Uitleg getalstelsel omrekenen <p>Uitleg...</p><label for='vanafGetal'>Vanaf dit talstelsel:</label><input class='inputRek' type='text' id='vanafGetal'><br/><label for='omrekenGetal'>Om te rekenen getal:</label><input class='inputRek' type='text' id='omrekenGetal'><br/><label for='naarGetal'>Naar dit talstelsel:</label><input class='inputRek' type='text' id='naarGetal'><input id='submitRek' type='submit' value='Bereken' onclick='omrekenTalstelsel();'><div id='error'></div>";
+ 		document.getElementById("berekening").innerHTML = "Uitleg getalstelsel omrekenen <p>Hier kun je een getal omrekenen naar een ander talstelsel.</p><label for='vanafGetal'>Vanaf dit talstelsel:</label><input class='inputRek' type='text' id='vanafGetal'><br/><label for='omrekenGetal'>Om te rekenen getal:</label><input class='inputRek' type='text' id='omrekenGetal'><br/><label for='naarGetal'>Naar dit talstelsel:</label><input class='inputRek' type='text' id='naarGetal'><br/><input id='submitRek' type='submit' value='Bereken' onclick='omrekenTalstelsel();'><div id='error'></div>";
  	}
  	else if(x == 8){
- 		document.getElementById("berekening").innerHTML = "Uitleg ontbinden in priemgetallen<p>Uitleg...</p><label for='ontbindGetal'>Ontbind dit getal:</label><input class='inputRek' type='text' id='ontbindGetal'><br/><input id='submitRek' type='submit' value='Bereken' onclick='ontbinden();'><div id='error'></div>";
+ 		document.getElementById("berekening").innerHTML = "Uitleg ontbinden in priemgetallen<p>Vul een getal in om het te ontbinden in priemgetallen. Een priemgetal is alleen deelbaar door 1 en door zichzelf.</p><label for='ontbindGetal'>Ontbind dit getal:</label><input class='inputRek' type='text' id='ontbindGetal'><br/><input id='submitRek' type='submit' value='Bereken' onclick='ontbinden();'><div id='error'></div>";
  	}
 }
 
@@ -134,7 +134,10 @@ function priem() {
 }
 function ontbinden() {
 	var ontbindGetal = document.getElementById('ontbindGetal').value ;
+	document.getElementById('uitkomst').innerHTML = "Uitkomst" ;
+	var uitkomst = "<br/>";
 	if (parseInt(ontbindGetal)) {
+		uitkomst += ontbindGetal + " = ";
 		for (var i = 2; ontbindGetal > 1; i) {
 			var prime = true;
 			for (var x = 2; x < i; x++) {
@@ -142,15 +145,23 @@ function ontbinden() {
 					prime = false;
 				}
 			}
-			if (prime == true) {
-				if (ontbindGetal % i == 0) {
+			while (ontbindGetal % i == 0 && prime == true) {
 					ontbindGetal = ontbindGetal / i;
-					document.getElementById('uitkomst').innerHTML += "</br>" + ontbindGetal + "*" + i ;
+
+					uitkomst += i + " * " ;
+					
+					
+
 				}
-				else{
-					i++ ;
-				}
-			}
+			i++;
 		}
+		document.getElementById("error").innerHTML = "Bereking gelukt!";
 	}
+	else{
+		document.getElementById("error").innerHTML = "Vul een geheel getal in voor welk getal je wilt ontbinden.";
+	}
+
+	var res = uitkomst.substring(0, uitkomst.length -3);
+	document.getElementById('uitkomst').innerHTML += res;
 }
+

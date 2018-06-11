@@ -103,6 +103,7 @@ function kwadraat() {
 }
 
 function fibonacci() {
+	document.getElementById("uitkomst").innerHTML= "Uitkomst";
 	var fibonacciGetal = document.getElementById('fibonacciGetal').value ;
 	var a = 0 ;
 	var b = 1 ;
@@ -115,20 +116,31 @@ function fibonacci() {
 			a = b ;
 			b = c ;
 		}
+		document.getElementById("error").innerHTML = "Bereking gelukt!";
+	}
+	else{
+		document.getElementById("error").innerHTML = "Vul een geheel getal in voor tot welk getal je wilt berekenen.";
 	}
 }
 function priem() {
+	document.getElementById("uitkomst").innerHTML= "Uitkomst";
 	var priemGetal = document.getElementById('priemGetal').value ;
-	for (var i = 2; i <= priemGetal; i++) {
-		var IsPrime = true;
-		for (var x = 2; x < i; x++) {
-			if (i % x == 0) {
-				IsPrime = false ;
+	if (parseInt(priemGetal)) {
+		for (var i = 2; i <= priemGetal; i++) {
+			var IsPrime = true;
+			for (var x = 2; x < i; x++) {
+				if (i % x == 0) {
+					IsPrime = false ;
+				}
+				
 			}
-			
+			if (IsPrime == true) {
+				document.getElementById('uitkomst').innerHTML += "</br>" + i;
+			}
 		}
-		if (IsPrime == true) {
-			document.getElementById('uitkomst').innerHTML += "</br>" + i;
-		}
+		document.getElementById("error").innerHTML = "Bereking gelukt!";
+	}
+	else{
+		document.getElementById("error").innerHTML = "Vul een geheel getal in voor tot welk getal je wilt berekenen.";
 	}
 }

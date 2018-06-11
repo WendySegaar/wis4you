@@ -132,3 +132,25 @@ function priem() {
 		}
 	}
 }
+function ontbinden() {
+	var ontbindGetal = document.getElementById('ontbindGetal').value ;
+	if (parseInt(ontbindGetal)) {
+		for (var i = 2; ontbindGetal > 1; i) {
+			var prime = true;
+			for (var x = 2; x < i; x++) {
+				if (i % x == 0) {
+					prime = false;
+				}
+			}
+			if (prime == true) {
+				if (ontbindGetal % i == 0) {
+					ontbindGetal = ontbindGetal / i;
+					document.getElementById('uitkomst').innerHTML += "</br>" + ontbindGetal + "*" + i ;
+				}
+				else{
+					i++ ;
+				}
+			}
+		}
+	}
+}

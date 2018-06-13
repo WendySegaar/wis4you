@@ -110,8 +110,8 @@ function fibonacci() {
 	var c = 0 ;
 
 	if (parseInt(fibonacciGetal)) {
-		for (var i = 0; i < fibonacciGetal; i = c) {
-			document.getElementById('uitkomst').innerHTML += "</br>" + c  ; 
+		for (var i = 0; i < fibonacciGetal; i = a) {
+			document.getElementById('uitkomst').innerHTML += "</br>" + a  ; 
 			c = a + b ;
 			a = b ;
 			b = c ;

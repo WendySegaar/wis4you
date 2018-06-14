@@ -107,12 +107,11 @@ function fibonacci() {
 	var fibonacciGetal = document.getElementById('fibonacciGetal').value ;
 	var a = 0 ;
 	var b = 1 ;
-	var c = 1;
+	var c = 0;
 
 	if (parseInt(fibonacciGetal)) {
-		document.getElementById('uitkomst').innerHTML += "<br/>" + a  ; 
-		while(c < fibonacciGetal){
-			document.getElementById('uitkomst').innerHTML += "<br/>" + c  ; 
+		for (var i = 0; i < fibonacciGetal; i = a) {
+			document.getElementById('uitkomst').innerHTML += "</br>" + a  ; 
 			c = a + b ;
 			a = b ;
 			b = c ;

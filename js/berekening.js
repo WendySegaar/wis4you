@@ -151,7 +151,6 @@ function omrekenTalstelsel() {
 	var talstelsel1 = document.getElementById('vanafGetal').value ;
 	var omrekenGetal = document.getElementById('omrekenGetal').value  ;
 	var talstelsel2 = document.getElementById('naarGetal').value ;
-	var uitkomsten1 = uitkomsten2 = new Array();
 	var uitkomst1 = uitkomst2 = 0;
 	if (parseInt(talstelsel1) && parseInt(omrekenGetal) && parseInt(talstelsel2)){
 		
@@ -174,17 +173,30 @@ function omrekenTalstelsel() {
 					}
 
 				}
-				document.getElementById("uitkomst").innerHTML += "<br/>" + uitkomst1;
+				
 			}
 			else{
 				uitkomst1 = omrekenGetal;
 			}
 			if(talstelsel2 != 10){
+				var machtreeks = new Array(1);
 
+				var count = 0;
+				for(var i = 0; machtreeks[i] <= uitkomst1; i++){
+					var macht = Math.pow(talstelsel2, i);
+					machtreeks.push(macht[i]);
+					if(uitkomst1 - machtreeks[i] >= 0)
+						uitkomst1 = uitkomst1 - machtreeks[i];
+						count++;
+					}
+					uitkomst2 += count;
+					count = 0;
+				}
 			}
 			else {
 				uitkomst2 = uitkomst1;
 			}
+		document.getElementById("uitkomst").innerHTML += "<br/>" + uitkomst2;
 		}
 		else {
 			document.getElementById("error").innerHTML = "De talstelsels moeten tussen 2 en 36 liggen";

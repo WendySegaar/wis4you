@@ -13,6 +13,23 @@ body{
 	font-family: Consolas;
 	color: white;
 }
+#inlogBody {
+	color: var(--light-blue);
+	background-color: var(--light-blue);
+}
+#inlogForm {
+	background-color: white;
+	width: 80vw;
+	margin: 10vw 8vw ;
+	padding: 2vw;
+}
+#inlogForm h2 {
+	font-size: 5vw;
+	padding-bottom: 1vw;
+}
+#inlogForm label {
+	font-size: 4vw;
+}
 header{
 	padding: 2vw 4vw 2vw 4vw;
 	display: grid;
@@ -85,7 +102,7 @@ footer p {
 	font-size: 4vw;
 	padding-top: 1vw;
 }
-form {
+#formFooter {
 	display: grid;
 	grid-template-rows: repeat(2, auto);
 	grid-template-columns: 1fr;
@@ -108,6 +125,7 @@ form {
 	border: 0 none;
 	background: linear-gradient( var(--light-blue),  var(--dark-blue));
 }
+
 /*rekenpagina*/
 .container{
 	padding: 2vw;
@@ -146,13 +164,17 @@ form {
 #berekening label {
 	font-size: 3.5vw;
 }
-.inputRek {
+.inputRek, .inlogInput {
 	width: 15vw;
 	border: 1px solid var(--light-blue);
 	font-size: 2.5vw;
 	color: var(--dark-blue);
 }
-#submitRek {
+.inlogInput {width: 25vw;}
+.inlogInput, #inlogSubmit {
+	margin-bottom: 1vw;
+}
+#submitRek, #inlogSubmit {
 	margin-top: 1vw;
 	font-size: 3.5vw;
 	color: white;
@@ -254,6 +276,17 @@ form {
 	
 }
 @media (min-width: 768px) {
+	#inlogForm{
+		width: 50vw;
+		margin: 10vw 23vw ;
+
+	}
+	#inlogForm h2{
+		font-size: 3vw;
+	}
+	#inlogForm label {
+		font-size: 2vw;
+	}
 	header {
 		grid-template-columns: 32vw 1fr 7vw;
 	}
@@ -284,7 +317,7 @@ form {
 	footer p {
 		font-size: 2vw;
 	}
-	form {
+	#formFooter {
 		grid-template-rows: 1fr;
 		grid-template-columns: 70vw 1fr;
 		grid-template-areas: "input submit";
@@ -330,12 +363,16 @@ form {
 	#berekening label {
 		font-size: 2vw;
 	}
-	.inputRek {
+	.inputRek, .inlogInput {
 		width: 15vw;
 		height: 2vw;
 		border: 1px solid var(--light-blue);
 	}
-	#submitRek {
+	.inlogInput {
+		font-size: 1.5vw;
+		width: 15vw;
+	}
+	#submitRek, #inlogSubmit {
 		font-size: 1.5vw;
 	}
 	/*dobbelen*/

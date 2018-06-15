@@ -1,18 +1,8 @@
 <?php
 session_start();
 
-$user = $error = $login = "";
+$error = "";
 
-if(isset($_SESSION['ingelogd'])){
-	if($_SESSION['ingelogd'] == "ja"){
-		$login = "uitloggen";
-		$user = $_SESSION['user'];
- }
-}
-
-else {
-	$login = "inloggen";
-}
 
 ?>
 <!doctype html>
@@ -30,8 +20,9 @@ else {
 </head>
 <body id="inlogBody">
 	<form id="inlogForm" method="POST" action="ingelogd.php">
+		<img id="logo" src="images/logo.png">
 		<h2>Inloggen</h2>
-		<label for="username">Gebruikersnaam:</label> <input class="inlogInput" type="text" name="username" value="<?php echo $user ?>" /><br/>
+		<label for="username">Gebruikersnaam:</label> <input class="inlogInput" type="text" name="username" /><br/>
 		<label for="password">Wachtwoord:</label> <input class="inlogInput" type="password" name="password"/><br/>
 		<input id="inlogSubmit" type="submit" name="submit" value="Login"/>
 			<?php
@@ -40,7 +31,6 @@ else {
 				$_SESSION['error'] = null; 
 			}
 			?>		
-			</span>
 	</form>
 </body>
 </html>        

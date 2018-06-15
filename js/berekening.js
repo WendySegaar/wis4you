@@ -152,9 +152,10 @@ function omrekenTalstelsel() {
 	var omrekenGetal = document.getElementById('omrekenGetal').value  ;
 	var talstelsel2 = document.getElementById('naarGetal').value ;
 	var uitkomst1 = uitkomst2 = 0;
-	if (parseInt(talstelsel1) && parseInt(omrekenGetal) && parseInt(talstelsel2)){
+	if (parseInt(talstelsel1) && parseInt(talstelsel2)){
 		
 		if((talstelsel1 >= 2) && (talstelsel1 <= 36) && (talstelsel2 >= 2) && (talstelsel2 <= 36)){
+		
 			if(talstelsel1 != 10){
 				omrekenGetal = omrekenGetal.toString();
 
@@ -179,24 +180,29 @@ function omrekenTalstelsel() {
 				uitkomst1 = omrekenGetal;
 			}
 			if(talstelsel2 != 10){
-				var machtreeks = new Array(1);
-
-				var count = 0;
+				var machtreeks = new Array(1, talstelsel2);
+				var count = 1;
 				for(var i = 0; machtreeks[i] <= uitkomst1; i++){
 					var macht = Math.pow(talstelsel2, i);
-					machtreeks.push(macht[i]);
-					if(uitkomst1 - machtreeks[i] >= 0)
-						uitkomst1 = uitkomst1 - machtreeks[i];
+					machtreeks.push(macht);
+					alert(machtreeks[machtreeks.length - i]);
+					if(uitkomst1 - machtreeks[machtreeks.length - i] >= 0){
+
+						uitkomst1 = uitkomst1 - machtreeks[machtreeks.length - i];
+						document.getElementById("uitkomst").innerHTML += "<br/>" + uitkomst1;
 						count++;
 					}
-					uitkomst2 += count;
-					count = 0;
+					else {
+						uitkomst2 += count;
+					}
+					
+					
 				}
 			}
 			else {
 				uitkomst2 = uitkomst1;
 			}
-		document.getElementById("uitkomst").innerHTML += "<br/>" + uitkomst2;
+		//document.getElementById("uitkomst").innerHTML += "<br/>" + uitkomst2;
 		}
 		else {
 			document.getElementById("error").innerHTML = "De talstelsels moeten tussen 2 en 36 liggen";

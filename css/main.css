@@ -253,6 +253,11 @@ form {
 	grid-area: clearIt;
 	
 }
+/*presentatie pagina*/
+#dia{
+	text-align: center;
+	width: 100vw;
+}
 @media (min-width: 768px) {
 	header {
 		grid-template-columns: 32vw 1fr 7vw;

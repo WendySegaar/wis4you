@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 	session_start();
 
-	if($user = "GAST" && $ww = "Welkom#1") {
+	if($user == "GAST" && $ww == "Welkom#1") {
 		
 		$user = mysqli_fetch_row($result);
 		$_SESSION['ingelogd'] = "ja";
@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	}else{
 
 		$_SESSION['error'] = "Inloggen is niet gelukt.";
-		header("Location: inloggen.php");
+		header("Location: index.php");
 
 
 	}

@@ -33,13 +33,20 @@ body{
 header{
 	padding: 2vw 4vw 2vw 4vw;
 	display: grid;
-	grid-template-columns: 40vw 1fr 10vw;
+	grid-template-columns: 40vw 1fr 20vw;
 	grid-template-areas: 
-	"logo leeg hamburger";
+	"logo leeg uitloggen hamburger";
 	position: relative;
 }
 #logo{
 	grid-area: logo;
+	width: 100%;
+}
+#uitloggenLink {
+	grid-area: uitloggen;
+
+}
+#uitloggen {
 	width: 100%;
 }
 #hamburger{
@@ -288,7 +295,7 @@ footer p {
 		font-size: 2vw;
 	}
 	header {
-		grid-template-columns: 32vw 1fr 7vw;
+		grid-template-columns: 32vw 1fr 7vw 7vw;
 	}
 	.home_container {
 		grid-template-columns: repeat(3, 1fr);

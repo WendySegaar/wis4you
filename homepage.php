@@ -23,25 +23,26 @@ if($_SESSION['ingelogd'] != "ja"){
 <body>
 	<header>
 		<img id="logo" src="images/logo.png">
+		<a href="uitloggen.php" id="uitloggenLink"><img id="uitloggen" src="images/uitloggen.png"></a>
 		<img id="hamburger" src="images/hamburger.png" onclick="hamburgerDropdown();">
 		<nav id="hamburgerDropdown">
 			<ul>
-				<li><a href="presentatie.html">Presentatie</a></li>
-				<li><a href="rekenen.html">Rekenen</a></li>
-				<li><a href="reeksen.html">Reeksen</a></li>
-				<li><a href="pittig_rekenen.html">Pittig rekenen</a></li>
-				<li><a href="dobbelen.html">Dobbelen</a></li>
-				<li><a href="shoot_the_pig.html">Shoot the pig</a></li>
+				<li><a href="presentatie.php">Presentatie</a></li>
+				<li><a href="rekenen.php">Rekenen</a></li>
+				<li><a href="reeksen.php">Reeksen</a></li>
+				<li><a href="pittig_rekenen.php">Pittig rekenen</a></li>
+				<li><a href="dobbelen.php">Dobbelen</a></li>
+				<li><a href="shoot_the_pig.php">Shoot the pig</a></li>
 			</ul>
 		</nav>
 	</header>
 	<div class="home_container">
-		<a href="presentatie.html"><img class="home_menu" src="images/menu_1.png"></a>
-		<a href="rekenen.html"><img class="home_menu" src="images/menu_2.png"></a>
-		<a href="reeksen.html"><img class="home_menu" src="images/menu_3.png"></a>
-		<a href="pittig_rekenen.html"><img class="home_menu" src="images/menu_4.png"></a>
-		<a href="dobbelen.html"><img class="home_menu" src="images/menu_5.png"></a>
-		<a href="shoot_the_pig.html"><img class="home_menu" src="images/menu_6.png"></a>
+		<a href="presentatie.php"><img class="home_menu" src="images/menu_1.png"></a>
+		<a href="rekenen.php"><img class="home_menu" src="images/menu_2.png"></a>
+		<a href="reeksen.php"><img class="home_menu" src="images/menu_3.png"></a>
+		<a href="pittig_rekenen.php"><img class="home_menu" src="images/menu_4.png"></a>
+		<a href="dobbelen.php"><img class="home_menu" src="images/menu_5.png"></a>
+		<a href="shoot_the_pig.php"><img class="home_menu" src="images/menu_6.png"></a>
 	</div>
 	<div class="home_tekst">
 		<h1>Over WIS4YOU</h1>

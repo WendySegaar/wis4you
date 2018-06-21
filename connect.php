@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$dbname = "users";
+$dbname = "wis4you";
 
 $conn = mysqli_connect($host, $user, $pass, $dbname);
 

@@ -311,6 +311,36 @@ footer p {
 	border: 0 none;
 	color: white;
 }
+/*Shoot the pig pagina*/
+#shoot_container{
+	padding: 2vw;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas: "berekening"
+						"uitkomst";
+	grid-column-gap: 3vw;
+	grid-row-gap: 5vw;
+
+}
+#shoot_the_pig_uitkomst{
+	background-color: white;
+	width: 100%;
+	height: 50vw;
+	font-size: 3.5vw;
+	-webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.4);
+	border-radius: 8px;
+	border: 1px solid var(--light-blue);
+	color: var(--light-blue);
+	text-align: center;
+	grid-area: uitkomst;
+}
+#shoot_niet_op_mobiel{
+	display: block;
+}
+#shoot_the_pig{
+	display: none;
+}
 @media (min-width: 768px) {
 	#inlogForm{
 		width: 50vw;
@@ -418,4 +448,11 @@ footer p {
 	.numberRad {
 		font-size: 2vw;
 	}
+}
+/*Shoot the pig pagina*/
+#shoot_niet_op_mobiel{
+	display: none;
+}
+#shoot_the_pig{
+	display: block;
 }

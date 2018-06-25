@@ -30,8 +30,8 @@
 	</header>
 	<div id="gridPresentatie">
 		<div id="dia"></div>
-		<button id="presentatieButtonL" class="buttonRL" onclick="move(-1)"><-</button>
-		<button id="presentatieButtonR" class="buttonRL" onclick="move(1)">-></button>		
+		<button id="presentatieButtonL" class="buttonRL" onclick="move(-1)"><</button>
+		<button id="presentatieButtonR" class="buttonRL" onclick="move(1)">></button>		
 	</div>
 </body>
 </html>

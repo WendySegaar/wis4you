@@ -8,7 +8,7 @@ window.onload = function SetupArray() {
 }
 function move(x){
 	counter = counter + x;
-	if  (counter == -1){
+	if  (counter <= -1){
 		counter = 8;
 		document.getElementById('dia').innerHTML = "<img id='presentatieFoto' src='images/" + arr[counter] + "/>";
 		document.getElementById('presentatieFoto').style.width = "100%";

@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="js/hamburger.js"></script>
 	<title>WIS4YOU</title>
 </head>
-<body onload="SetupArray()">
+<body>
 	<header>
 		<a href="homepage.php"><img id="logo" src="images/logo.png"></a>
 		<a href="uitloggen.php" id="uitloggenLink"><img id="uitloggen" src="images/uitloggen.png"></a>

@@ -1,7 +1,7 @@
 var arr;
 var counter = 0;
 
-function SetupArray() {
+window.onload = function SetupArray() {
 	arr = new Array("slide1.png", "slide2.png", "slide3.png", "slide4.png", "slide5.png", "slide6.png", "slide7.png", "slide8.png", "slide9.png");
 	document.getElementById('dia').innerHTML = "<img id='presentatieFoto' src='images/" + arr[counter] + "/>";
 	document.getElementById('presentatieFoto').style.width = "100%";
@@ -26,7 +26,7 @@ function move(x){
 
 	}
 }
-window.addEventListener('keydown', function(e){
-	if(e.keyCode == 39){ counter++;}
-	else if(e.keyCode == 37){ counter--;}
-})
+// window.addEventListener('keydown', function(e){
+// 	if(e.keyCode == 39){ counter++;}
+// 	else if(e.keyCode == 37){ counter--;}
+// })

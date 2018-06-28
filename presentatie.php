@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="js/hamburger.js"></script>
 	<title>WIS4YOU</title>
 </head>
-<body onload="SetupArray()">
+<body>
 	<header>
 		<a href="index.html"><img id="logo" src="images/logo.png"></a>
 		<img id="hamburger" src="images/hamburger.png" onclick="hamburgerDropdown();">
@@ -29,7 +29,7 @@
 		</nav>
 	</header>
 	<div id="gridPresentatie">
-		<img id="presentatieFoto" src="">
+		<div id="dia"></div>
 		<button id="presentatieButtonL" class="buttonRL" onclick="move(-1)"><</button>
 		<button id="presentatieButtonR" class="buttonRL" onclick="move(1)">></button>		
 	</div>

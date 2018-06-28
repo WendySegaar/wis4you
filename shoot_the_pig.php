@@ -16,7 +16,7 @@ if($_SESSION['ingelogd'] != "ja"){
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
-	<script type="text/javascript" src="js/berekening.js"></script>
+	<script type="text/javascript" src="js/shoot.js"></script>
 	<script type="text/javascript" src="js/hamburger.js"></script>
 	<title>WIS4YOU</title>
 </head>
@@ -42,10 +42,10 @@ if($_SESSION['ingelogd'] != "ja"){
 		</div>
 		<div id="shoot_the_pig_uitkomst">
 			<div id="shoot_the_pig">
-				<img src="images/shoot.png" onclick="shoot()">
-				<img src="images/bird.png">
-				<img src="images/canon.png">
-				<img src="images/toren.png">
+				<img src="images/shoot.png" id="shoot" onclick="shoot()">
+				<img src="images/bird.png" id="bird">
+				<img src="images/canon.png" id="canon">
+				<img src="images/toren.png" id="toren">
 			</div>
 			<div id="shoot_niet_op_mobiel">Shoot the pig kan je niet spelen op een mobiel.</div>
 		</div>

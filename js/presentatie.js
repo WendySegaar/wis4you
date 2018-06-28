@@ -26,3 +26,7 @@ function move(x){
 
 	}
 }
+window.addEventListener('keydown', function(e){
+	if(e.keyCode == 39){ counter++;}
+	else if(e.keyCode == 37){ counter--;}
+})

@@ -29,7 +29,7 @@
 		</nav>
 	</header>
 	<div id="gridPresentatie">
-		<div id="dia"></div>
+		<img id="presentatieFoto" src="">
 		<button id="presentatieButtonL" class="buttonRL" onclick="move(-1)"><</button>
 		<button id="presentatieButtonR" class="buttonRL" onclick="move(1)">></button>		
 	</div>

@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if($_SESSION['ingelogd'] == "ja"){
+	$user = $_SESSION['user'];
+	
+}
+else {
+	header("Location: index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +25,10 @@
 	<script type="text/javascript" src="js/hamburger.js"></script>
 	<title>WIS4YOU</title>
 </head>
-<body>
+<script type="text/javascript">
+	var x = <?php echo json_encode($user); ?>; 
+</script>
+<body onload="SetupArray(x)">
 	<header>
 		<a href="homepage.php"><img id="logo" src="images/logo.png"></a>
 		<a href="uitloggen.php" id="uitloggenLink"><img id="uitloggen" src="images/uitloggen.png"></a>

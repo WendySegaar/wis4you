@@ -3,8 +3,13 @@ var counter = 0;
 var x;
 
 
-window.onload = function SetupArray() {
-	arr = new Array("slide1.png", "slide2.png", "slide3.png", "slide4.png", "slide5.png", "slide6.png", "slide7.png", "slide8.png", "slide9.png");
+function SetupArray(user) {
+	if(user == 'GAST'){
+		arr = new Array("slide1_geb.png", "slide.png", "slide.png");
+	}
+	else if(user == 'ADMIN'){
+		arr = new Array("slide1.png", "slide2.png", "slide3.png", "slide4.png", "slide5.png", "slide6.png", "slide7.png", "slide8.png", "slide9.png");
+	}
 	document.getElementById('dia').innerHTML = "<img id='presentatieFoto' src='images/" + arr[counter] + "'/>";
 	document.getElementById('presentatieFoto').style.width = "100%";
 }

@@ -33,7 +33,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 	if($aantal == 1) {
 		
-		$user = mysqli_fetch_row($result);
 		$_SESSION['ingelogd'] = "ja";
 		$_SESSION['user'] = $user;
 		header("Location: homepage.php");

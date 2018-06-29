@@ -145,6 +145,72 @@ function priem() {
 		document.getElementById("error").innerHTML = "Vul een geheel getal in voor tot welk getal je wilt berekenen.";
 	}
 }
+function omrekenTalstelsel() {
+	document.getElementById("uitkomst").innerHTML= "Uitkomst";
+	var talstelsel1 = document.getElementById('vanafGetal').value ;
+	var omrekenGetal = document.getElementById('omrekenGetal').value  ;
+	var talstelsel2 = document.getElementById('naarGetal').value ;
+	var uitkomst1 = uitkomst2 = 0;
+	if (parseInt(talstelsel1) && parseInt(talstelsel2)){
+		
+		if((talstelsel1 >= 2) && (talstelsel1 <= 36) && (talstelsel2 >= 2) && (talstelsel2 <= 36)){
+		
+			if(talstelsel1 != 10){
+				omrekenGetal = omrekenGetal.toString();
+
+				for (var i = 0; i < omrekenGetal.length; i++) {
+					var num = omrekenGetal.substr(omrekenGetal.length - i - 1, 1);
+					if(num >= talstelsel1){
+						document.getElementById("error").innerHTML = "Dit om te rekenen getal komt niet voor in het ingevoerde talstelsel";
+						document.getElementById("uitkomst").innerHTML = "Uitkomst";
+						return;
+					}
+					else{
+						
+						num = parseInt(num)*Math.pow(talstelsel1, i);
+						uitkomst1 = uitkomst1 + num;
+						
+					}
+
+				}
+				
+			}
+			else{
+				uitkomst1 = omrekenGetal;
+			}
+			if(talstelsel2 != 10){
+				var machtreeks = new Array(1, talstelsel2);
+				var count = 1;
+				for(var i = 0; machtreeks[i] <= uitkomst1; i++){
+					var macht = Math.pow(talstelsel2, i);
+					machtreeks.push(macht);
+					alert(machtreeks[machtreeks.length - i]);
+					if(uitkomst1 - machtreeks[machtreeks.length - i] >= 0){
+
+						uitkomst1 = uitkomst1 - machtreeks[machtreeks.length - i];
+						document.getElementById("uitkomst").innerHTML += "<br/>" + uitkomst1;
+						count++;
+					}
+					else {
+						uitkomst2 += count;
+					}
+					
+					
+				}
+			}
+			else {
+				uitkomst2 = uitkomst1;
+			}
+		//document.getElementById("uitkomst").innerHTML += "<br/>" + uitkomst2;
+		}
+		else {
+			document.getElementById("error").innerHTML = "De talstelsels moeten tussen 2 en 36 liggen";
+		}
+	}
+	else {
+		document.getElementById("error").innerHTML = "Voer gehele getallen in bij alle drie de velden.";
+	}
+}
 function ontbinden() {
 	var ontbindGetal = document.getElementById('ontbindGetal').value ;
 	document.getElementById('uitkomst').innerHTML = "Uitkomst" ;

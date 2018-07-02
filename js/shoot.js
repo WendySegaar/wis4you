@@ -4,6 +4,7 @@ var marginLeft_Cannonball;
 var marginTop_Cannonball;
 var e_Frame;
 var fire_Timer;
+var gravity = -2;
 
 function shoot() {
     e_Frame = document.getElementById('shoot_the_pig').offsetWidth;
@@ -20,9 +21,10 @@ function moveCannonball() {
     marginTop_Cannonball = style_Cannonball.top;
     marginTop_Cannonball = marginTop_Cannonball.replace("px", "");
 
-    if (marginLeft_Cannonball < e_Frame - 239) {
-        marginLeft_Cannonball = parseInt(marginLeft_Cannonball) + 1;
-        marginTop_Cannonball = parseInt(marginTop_Cannonball) + 1;
+    if (marginLeft_Cannonball < e_Frame - 210) {
+        gravity = gravity + 0.01;
+        marginLeft_Cannonball = parseInt(marginLeft_Cannonball) + 2;
+        marginTop_Cannonball = parseInt(marginTop_Cannonball) + gravity;
     }
     else {
         clearInterval(fire_Timer);

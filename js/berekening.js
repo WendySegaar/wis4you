@@ -179,29 +179,37 @@ function omrekenTalstelsel() {
 				uitkomst1 = omrekenGetal;
 			}
 			if(talstelsel2 != 10){
-				var machtreeks = new Array(1, talstelsel2);
-				var count = 1;
-				for(var i = 0; machtreeks[i] <= uitkomst1; i++){
-					machtreeks[i] = Math.pow(talstelsel2, i);
-					machtreeks.push(machtreeks[i]);
-					alert(machtreeks[i]);
-					if(uitkomst1 - machtreeks[machtreeks.length - i] >= 0){
+				var machtreeks = new Array();
+				var macht = 0;
+				var count = 0;
+				for(var i = 0; macht <= uitkomst1 ; i++){
+					macht = Math.pow(talstelsel2, i)
+					
+					machtreeks[i] = macht;
 
-						uitkomst1 = uitkomst1 - machtreeks[machtreeks.length - i];
-						
+					
+				
+				}
+				machtreeks.pop();
+				machtreeks.reverse();
+				console.log(uitkomst1, machtreeks);
+				for(var i = 0; i <= machtreeks.length - 1; i++ ){
+					while (uitkomst1 - machtreeks[i] >= 0){
+						uitkomst1 = uitkomst1 - machtreeks[i];
 						count++;
 					}
-					else {
-						uitkomst2 += count;
-					}
 					
-					
+					uitkomst2 += count.toString();
+					count = 0;
+								
 				}
-			}
+				uitkomst2 = uitkomst2.substr(1, count.length);
+			}	
 			else {
 				uitkomst2 = uitkomst1;
 			}
-		//document.getElementById("uitkomst").innerHTML += "<br/>" + uitkomst2;
+			document.getElementById("uitkomst").innerHTML += "<br/>" + uitkomst2;
+			
 		}
 		else {
 			document.getElementById("error").innerHTML = "De talstelsels moeten tussen 2 en 36 liggen";

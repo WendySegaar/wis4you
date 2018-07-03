@@ -182,13 +182,13 @@ function omrekenTalstelsel() {
 				var machtreeks = new Array(1, talstelsel2);
 				var count = 1;
 				for(var i = 0; machtreeks[i] <= uitkomst1; i++){
-					var macht = Math.pow(talstelsel2, i);
-					machtreeks.push(macht);
-					alert(machtreeks[machtreeks.length - i]);
+					machtreeks[i] = Math.pow(talstelsel2, i);
+					machtreeks.push(machtreeks[i]);
+					alert(machtreeks[i]);
 					if(uitkomst1 - machtreeks[machtreeks.length - i] >= 0){
 
 						uitkomst1 = uitkomst1 - machtreeks[machtreeks.length - i];
-						document.getElementById("uitkomst").innerHTML += "<br/>" + uitkomst1;
+						
 						count++;
 					}
 					else {

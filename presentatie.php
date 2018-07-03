@@ -49,5 +49,18 @@ else {
 		<button id="presentatieButtonL" class="buttonRL" onclick="move(-1)"><</button>
 		<button id="presentatieButtonR" class="buttonRL" onclick="move(1)">></button>		
 	</div>
+	<?php 
+		if ($user != "ADMIN"){
+			echo '<footer>
+				<h2>Vragen of suggesties</h2>
+				<p>Heb jij na het bekijken van de website nog een vraag over logica? Of heb je een suggestie voor het verbeteren van de website? Dan horen wij graag van je!</p>
+				<form id="formFooter">
+					<input id="footerInput" type="text">
+					<input id="footerSubmit" type="submit" value="Verstuur">
+				</form>
+			</footer>';
+		}
+	
+	?>
 </body>
 </html>

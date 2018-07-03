@@ -154,12 +154,30 @@ function omrekenTalstelsel() {
 	if (parseInt(talstelsel1) && parseInt(talstelsel2)){
 		
 		if((talstelsel1 >= 2) && (talstelsel1 <= 36) && (talstelsel2 >= 2) && (talstelsel2 <= 36)){
-		
+
 			if(talstelsel1 != 10){
 				omrekenGetal = omrekenGetal.toString();
 
 				for (var i = 0; i < omrekenGetal.length; i++) {
 					var num = omrekenGetal.substr(omrekenGetal.length - i - 1, 1);
+					if(num == "A"){
+						num = 10;
+					}
+					else if(num == "B"){
+						num = 11;
+					}
+					else if(num == "C"){
+						num = 12;
+					}
+					else if(num == "D"){
+						num = 13;
+					}
+					else if(num == "E"){
+						num = 14;
+					}
+					else if(num == "F"){
+						num = 15;
+					}
 					if(num >= talstelsel1){
 						document.getElementById("error").innerHTML = "Dit om te rekenen getal komt niet voor in het ingevoerde talstelsel";
 						document.getElementById("uitkomst").innerHTML = "Uitkomst";
@@ -199,6 +217,25 @@ function omrekenTalstelsel() {
 						count++;
 					}
 					
+					if (count == 10){
+						count = "A";
+					}
+					else if (count == 11){
+						count = "B";
+					}
+					else if (count == 12){
+						count = "C";
+					}
+					else if (count == 13){
+						count = "D";
+					}
+					else if (count == 14){
+						count = "E";
+					}
+					else if (count == 15){
+						count = "F";
+					}
+
 					uitkomst2 += count.toString();
 					count = 0;
 								
@@ -212,7 +249,7 @@ function omrekenTalstelsel() {
 			
 		}
 		else {
-			document.getElementById("error").innerHTML = "De talstelsels moeten tussen 2 en 36 liggen";
+			document.getElementById("error").innerHTML = "De talstelsels moeten tussen 2 en 16 liggen";
 		}
 	}
 	else {

@@ -42,7 +42,11 @@ if($_SESSION['ingelogd'] != "ja"){
 		</div>
 		<div id="shoot_the_pig_uitkomst">
 			<div id="shoot_the_pig">
-				<img src="images/shoot.png" id="shoot" onclick="shoot()">
+				<img src="images/shoot1.png" class="shoot" id="shoot1" onclick="shoot(1)">
+				<img src="images/shoot2.png" class="shoot" id="shoot2" onclick="shoot(2)">
+				<img src="images/shoot.png" class="shoot" id="shoot3" onclick="shoot(3)">
+				<img src="images/shoot3.png" class="shoot" id="shoot4" onclick="shoot(4)">
+				<img src="images/shoot4.png" class="shoot" id="shoot5" onclick="shoot(5)">
 				<img src="images/bird.png" id="bird">
 				<img src="images/canon.png" id="canon">
 				<img src="images/toren.png" id="toren">

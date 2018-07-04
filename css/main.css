@@ -459,12 +459,32 @@ footer p {
 	#shoot_the_pig{
 		display: block;
 	}
-	#shoot{
+	#shoot1{
 	position: absolute;
 	top: 0;
 	left: 0;
 	}
-	#shoot:hover{
+	#shoot2{
+	position: absolute;
+	top: 0;
+	left: 50px;
+	}
+	#shoot3{
+	position: absolute;
+	top: 0;
+	left: 100px;
+	}
+	#shoot4{
+	position: absolute;
+	top: 0;
+	left: 150px;
+	}
+	#shoot5{
+	position: absolute;
+	top: 0;
+	left: 200px;  
+	}
+	.shoot:hover{
 		-webkit-animation-name: rotate;
     	-webkit-animation-duration: 1s;
     	-webkit-animation-iteration-count: infinite;

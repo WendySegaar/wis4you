@@ -314,6 +314,37 @@ footer p {
 .buttonRL:focus{
 	outline: none;
 }
+/*Shoot the pig pagina*/
+#shoot_container{
+	padding: 2vw;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas: "berekening"
+						"uitkomst";
+	grid-column-gap: 3vw;
+	grid-row-gap: 5vw;
+
+}
+#shoot_the_pig_uitkomst{
+	background-color: white;
+	width: 100%;
+	height: auto;
+	font-size: 3.5vw;
+	-webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.4);
+	border-radius: 8px;
+	border: 1px solid var(--light-blue);
+	color: var(--light-blue);
+	text-align: center;
+	grid-area: uitkomst;
+	position: relative;
+}
+#shoot_niet_op_mobiel{
+	display: block;
+}
+#shoot_the_pig{
+	display: none;
+}
 @media (min-width: 768px) {
 	#inlogForm{
 		width: 50vw;
@@ -421,4 +452,77 @@ footer p {
 	.numberRad {
 		font-size: 2vw;
 	}
+	/*Shoot the pig pagina*/
+	#shoot_the_pig_uitkomst{
+		height: 50vw;
+	}
+	#shoot_niet_op_mobiel{
+		display: none;
+	}
+	#shoot_the_pig{
+		display: block;
+	}
+	#shoot1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	}
+	#shoot2{
+	position: absolute;
+	top: 0;
+	left: 50px;
+	}
+	#shoot3{
+	position: absolute;
+	top: 0;
+	left: 100px;
+	}
+	#shoot4{
+	position: absolute;
+	top: 0;
+	left: 150px;
+	}
+	#shoot5{
+	position: absolute;
+	top: 0;
+	left: 200px;  
+	}
+	.shoot:hover{
+		-webkit-animation-name: rotate;
+    	-webkit-animation-duration: 1s;
+    	-webkit-animation-iteration-count: infinite;
+    	-webkit-animation-timing-function: linear;
+	}
+	@-webkit-keyframes rotate {
+    	from {
+       	 -webkit-transform: rotate(0deg);
+   	 	}
+
+    	to {
+    	    -webkit-transform: rotate(360deg);
+   	 	}
+	}
+	#bird{
+		position: absolute;
+		height: 5%;
+		width: auto;
+		bottom: 66.5%;
+		left: 14.5%;
+		display: none;
+	}
+	#canon{
+		position: absolute;
+		height: 15%;
+		width: auto;
+		bottom: 55%;
+		left: 3%;
+	}
+	#toren{
+		position: absolute;
+		height: 60%;
+		width: auto;
+		bottom: 0;
+		left: 0;
+	}
 }
+

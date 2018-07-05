@@ -261,7 +261,7 @@ function ontbinden() {
 	var uitkomst = "<br/>";
 	if (parseInt(ontbindGetal)) {
 		uitkomst += ontbindGetal + " = ";
-		for (var i = 2; ontbindGetal > 1; i) {
+		for (var i = 2; ontbindGetal > 1; i++) {
 			var prime = true;
 			for (var x = 2; x < i; x++) {
 				if (i % x == 0) {

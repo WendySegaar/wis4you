@@ -153,7 +153,7 @@ function omrekenTalstelsel() {
 	var uitkomst1 = uitkomst2 = 0;
 	if (parseInt(talstelsel1) && parseInt(talstelsel2)){
 		
-		if((talstelsel1 >= 2) && (talstelsel1 <= 36) && (talstelsel2 >= 2) && (talstelsel2 <= 36)){
+		if((talstelsel1 >= 2) && (talstelsel1 <= 16) && (talstelsel2 >= 2) && (talstelsel2 <= 16)){
 
 			if(talstelsel1 != 10){
 				omrekenGetal = omrekenGetal.toString();

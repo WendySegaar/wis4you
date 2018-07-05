@@ -49,6 +49,7 @@ else {
 		<button id="presentatieButtonL" class="buttonRL" onclick="move(-1)"><</button>
 		<button id="presentatieButtonR" class="buttonRL" onclick="move(1)">></button>		
 	</div>
+	<div id="presentatie_mobiel">De presentatie is alleen beschikbaar op desktop.</div>
 	<?php 
 		if ($user != "ADMIN"){
 			echo '<footer>

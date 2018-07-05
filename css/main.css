@@ -284,9 +284,16 @@ footer p {
 }
 /*presentatie pagina*/
 #gridPresentatie{
+	display: none;
 	position: relative;
 	text-align: center;
 
+}
+#presentatie_mobiel{
+	color: var(--light-blue);
+	text-align: center;
+	font-size: 5vw;
+	padding: 3vw;
 }
 #dia{
 	width: 100%;
@@ -400,6 +407,12 @@ footer p {
 	}
 	.buttonR {
 		font-size: 2vw;
+	}
+	#gridPresentatie {
+		display: block;
+	}
+	#presentatie_mobiel {
+		display: none;
 	}
 	/*rekenpagina*/
 	#rekenen_container{

@@ -210,7 +210,6 @@ function omrekenTalstelsel() {
 				}
 				machtreeks.pop();
 				machtreeks.reverse();
-				console.log(uitkomst1, machtreeks);
 				for(var i = 0; i <= machtreeks.length - 1; i++ ){
 					while (uitkomst1 - machtreeks[i] >= 0){
 						uitkomst1 = uitkomst1 - machtreeks[i];

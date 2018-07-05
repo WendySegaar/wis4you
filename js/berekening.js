@@ -276,7 +276,6 @@ function ontbinden() {
 					
 
 				}
-			i++;
 		}
 		document.getElementById("error").innerHTML = "Bereking gelukt!";
 	}
